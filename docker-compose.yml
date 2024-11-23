@@ -1,0 +1,8 @@
+version: '3'
+services:
+  updater:
+    build: .
+    env_file: .env
+    volumes:
+      - ${LOCAL_DIR}:${MOUNTED_DIR}
+      - ${SSH_DIR}:/root/.ssh:ro
